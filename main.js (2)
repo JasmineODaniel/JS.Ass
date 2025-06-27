@@ -1,0 +1,71 @@
+// 1. Check if user is old enough to drive
+let age = prompt("Enter your age:");
+age = Number(age);
+if (age >= 18) {
+  console.log("You are old enough to drive.");
+} else {
+  console.log(`You are left with ${18 - age} years to drive.`);
+}
+
+// 2. Compare myAge and yourAge
+let myAge = 25;
+let yourAge = prompt("Enter your age:");
+yourAge = Number(yourAge);
+if (yourAge > myAge) {
+  console.log(`You are ${yourAge - myAge} years older than me.`);
+} else if (yourAge < myAge) {
+  console.log(`I am ${myAge - yourAge} years older than you.`);
+} else {
+  console.log("We are the same age.");
+}
+
+// 3. Compare a and b using if...else and ternary
+let a = 4;
+let b = 3;
+
+// Using if...else
+if (a > b) {
+  console.log("a is greater than b");
+} else {
+  console.log("a is less than b");
+}
+
+// Using ternary
+let result = (a > b) ? "a is greater than b" : "a is less than b";
+console.log(result);
+
+// 4. Check if a number is even or odd
+let number = prompt("Enter a number:");
+number = Number(number);
+if (number % 2 === 0) {
+  console.log(`${number} is an even number`);
+} else {
+  console.log(`${number} is an odd number`);
+}
+
+// 5. Check the season
+let month = prompt("Enter month:");
+month = month.toLowerCase();
+if (["september", "october", "november"].includes(month)) {
+  console.log("The season is Autumn.");
+} else if (["december", "january", "february"].includes(month)) {
+  console.log("The season is Winter.");
+} else if (["march", "april", "may"].includes(month)) {
+  console.log("The season is Spring.");
+} else if (["june", "july", "august"].includes(month)) {
+  console.log("The season is Summer.");
+} else {
+  console.log("Invalid month.");
+}
+
+// 6. Check if a day is a weekend or working day
+let day = prompt("What is the day today?");
+day = day.toLowerCase();
+if (["saturday", "sunday"].includes(day)) {
+  console.log(`${day[0].toUpperCase() + day.slice(1)} is a weekend.`);
+} else if (["monday", "tuesday", "wednesday", "thursday", "friday"].includes(day)) {
+  console.log(`${day[0].toUpperCase() + day.slice(1)} is a working day.`);
+} else {
+  console.log("Invalid day.");
+}
+
